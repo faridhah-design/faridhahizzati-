@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Input Bilangan 1</td>
+            <td><input type="number" id="angka1" size="30"></td>
+        </tr>
+        <tr>
+            <td>Input Bilangan 2</td>
+            <td><input type="number" id="angka2" size="30"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button type="button" onclick="proses('+')" name="submit">+</button>
+                <button type="button" onclick="proses('-')" name="submit">-</button>
+                <button type="button" onclick="proses('*')" name="submit">*</button>
+                <button type="button" onclick="proses('/')" name="submit">/</button>
+            </td>
+        </tr>
+        <tr>
+            <td>output:</td>
+            <td><input type="number" name="output" id="output" readonly size="30"></td>
+        </tr>
+    </table>
+
+    <script>
+        function proses(operator) {
+            let angka1 = document.getElementById("angka1").value
+            angka1 = Number(angka1)
+            let angka2 = document.getElementById("angka2").value
+            angka2 = Number(angka2)
+            let hasil;
+            let output = document.getElementById("output")
+
+            switch(operator) {
+                case "+":
+                    hasil = angka1 + angka2;
+                    break;
+                case "-":
+                    hasil = angka1 - angka2;
+                    break;
+                case "*":
+                    hasil = angka1 * angka2;
+                    break;
+                case "/":
+                    hasil = angka1 / angka2;
+                    break;
+            }
+
+            output.value = hasil
+            
+        }
+    </script>
+</body>
+
+</html>
