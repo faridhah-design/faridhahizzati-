@@ -5,7 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <style>
-        
+        body {
+            background-color: #ffe6f0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        table {
+            background-color: #fff0f5;
+            border: 2px solid #ff69b4;
+            border-radius: 10px;
+            padding: 20px 30px;
+            box-shadow: 0 0 15px rgba(255, 105, 180, 0.3);
+        }
+
+        td {
+            padding: 10px;
+            color: #c71585;
+            font-weight: bold;
+        }
+
+        input[type="number"] {
+            width: 200px;
+            padding: 8px;
+            border: 2px solid #ffb6c1;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        input[type="number"]:focus {
+            border-color: #ff69b4;
+            box-shadow: 0 0 5px #ff69b4;
+        }
+
+        button {
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            margin: 5px 5px 0 0;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #ff1493;
+        }
+
+        input[readonly] {
+            background-color: #ffe4ec;
+        }
     </style>
 </head>
 <body>
@@ -62,5 +116,6 @@
         }
     </script>
 </body>
+
 
 </html>
